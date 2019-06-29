@@ -1,9 +1,9 @@
-# Lista de exercicios.
+# Lista de exercícios.
 ### 
 
 https://wiki.python.org.br/EstruturaSequencial
 
-***Uma adaptação dos exercicos de python para JavaScript.***  
+***Uma adaptação dos exercícios de python para JavaScript.***  
 ***Cada arquivo será uma Html com JavaScript fazendo o que o exercício deseja.***  
 
 
