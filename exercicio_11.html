@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 11</title>
+</head>
+
+<body>
+        <!-- 11 - Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:  
+        > o produto do dobro do primeiro com metade do segundo .  
+        > a soma do triplo do primeiro com o terceiro.  
+        > o terceiro elevado ao cubo.   -->
+
+    <table>
+        <tbody>
+            <tr>
+                <td>Digite um número 1:</td>
+                <td><input type="text" name="" id="numero1"></td>
+                <td rowspan="3"><button style="height: 80px;" onclick="calcularTudo()">Calcular</button></td>
+            </tr>
+            <tr>
+                <td>Digite um número 2:</td>
+                <td><input type="text" name="" id="numero2"></td>
+                
+            </tr>
+            <tr>
+                <td>Digite um numero real: </td>
+                <td><input type="text" name="" id="numeroR"></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td>O produto do dobro do primeiro com metade do segundo:</td>
+                <td id="dobroDoPrimeiro"></td>
+            </tr>
+            <tr>
+                <td>a soma do triplo do primeiro com o terceiro:</td>
+                <td id="somaTriploDoPrimeiro"></td>
+            </tr>
+            <tr>
+                <td>o terceiro elevado ao cubo: </td>
+                <td id="terceiroAoCubo"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function calcularTudo() {
+            var primeiro = Number(document.getElementById("numero1").value)
+            var segundo = Number(document.getElementById("numero2").value)
+            var terceiro = Number(document.getElementById("numeroR").value)
+
+            var dobroDoPrimeiro = primeiro * 2 * (segundo / 2)
+            var somaTriploDoPrimeiro = primeiro * 3 + terceiro
+            var terceiroAoCubo = terceiro ** 3
+            
+            document.getElementById("dobroDoPrimeiro").innerHTML = dobroDoPrimeiro
+            document.getElementById("somaTriploDoPrimeiro").innerHTML = somaTriploDoPrimeiro
+            document.getElementById("terceiroAoCubo").innerHTML = terceiroAoCubo
+
+        }
+    </script>
+</body>
+
+</html>
