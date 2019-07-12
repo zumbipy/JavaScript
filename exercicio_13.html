@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 13</title>
+</head>
+
+<body>
+    <!-- 
+        Tendo como dado de entrada a altura (h) de uma pessoa, construa um
+        algoritmo que calcule seu peso ideal, utilizando as seguintes
+        fórmulas:  
+            > Para homens: (72.7*h) - 58  
+            > Para mulheres: (62.1*h) - 44.7  
+    -->
+    <p>Digite sua altura: <input type="number" id="altura" onchange="pesoIdeal()"></p>
+    <p>Seu peso ideal para um Homem é: <span id="pesoH"></span></p>
+    <p>Seu peso ideal para uma Mulher é: <span id="pesoM"></span></p>
+
+    <script>
+        function pesoIdeal() {
+            var altura = document.getElementById("altura").value;
+            var resultadoH = (72.7 * (altura / 100) - 58);
+            var resultadoM = (62.1 * (altura / 100) - 44.7);
+            document.getElementById("pesoH").innerHTML = resultadoH.toFixed(2);
+            document.getElementById("pesoM").innerHTML = resultadoM.toFixed(2);
+        }
+    </script>
+
+</body>
+
+</html>

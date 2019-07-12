@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 12</title>
+</head>
+
+<body>
+    <!-- Tendo como dados de entrada a altura de uma pessoa, construa um
+    algoritmo que calcule seu peso ideal, usando a seguinte
+    fórmula: (72.7*altura) - 58     -->
+
+    <p>Digite sua altura: <input type="number" id="altura" onchange="pesoIdeal()"></p>
+    <p>Seu peso ideal é: <span id="peso"></span></p>
+
+    <script>
+        function pesoIdeal() {
+            var altura = document.getElementById("altura").value;
+            var resultado = (72.7 * (altura / 100) - 58);
+            document.getElementById("peso").innerHTML = resultado.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
