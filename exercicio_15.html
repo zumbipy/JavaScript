@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 15</title>
+</head>
+
+<body>
+    <!-- 15 - Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês.
+        Calcule e mostre o total do seu salário no referido mês,
+        sabendo-se que são descontados 11% para o Imposto de Renda,
+        8% para o INSS e 5% para o sindicato, faça um programa que nos dê:  
+
+        > salário bruto.  
+        > quanto pagou ao INSS.  
+        > quanto pagou ao sindicato.  
+        > o salário líquido.  
+        > calcule os descontos e o salário líquido, conforme a tabela abaixo:  
+
+        > + Salário Bruto : R$  
+        > - IR (11%) : R$  
+        > - INSS (8%) : R$  
+        > - Sindicato ( 5%) : R$  
+        > = Salário Liquido : R$   -->
+    <table>
+        <thead>
+            <tr><th colspan="2">Holerite De Funcionário</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td>Você Ganha Por Hora:</td>
+                <td><input type="number" min="0" id="salario"></td>
+            </tr>
+            <tr>
+                <td>Número De Horas Trabalhadas No Mês:</td>
+                <td><input type="number" min="0" id="hora" onchange="calTudo()"></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td>+ Salário Bruto :</td>
+                <td style="text-align: right;" id="salarioBruto">R$ 0,00</td>
+            </tr>
+            <tr>
+                <td>- IR (11%) :</td>
+                <td style="text-align: right;" id="ir">R$ 0,00</td>
+            </tr>
+            <tr>
+                <td>- INSS (8%) :</td>
+                <td style="text-align: right;" id="inss">R$ 0,00</td>
+            </tr>
+            <tr>
+                <td>- Sindicato ( 5%) :</td>
+                <td style="text-align: right;" id="sindicato">R$ 0,00</td>
+            </tr>
+            <tr>
+                <td>- Salário Liquido :</td>
+                <td style="text-align: right;" id="salarioLiquido">R$ 0,00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+    
+    function calTudo() {
+        var salario = Number(document.getElementById("salario").value)
+        var hora = Number(document.getElementById("hora").value)
+        var salarioBruto = salario * hora
+        var ir = salarioBruto * 0.11
+        var inss = salarioBruto * 0.08
+        var sindicato = salarioBruto * 0.05
+        var salarioLiquido = salarioBruto - ir - inss - sindicato
+        
+        document.getElementById("salarioBruto").innerHTML = `R$ ${salarioBruto.toFixed(2)}`
+        document.getElementById("ir").innerHTML = `R$ ${ir.toFixed(2)}`
+        document.getElementById("inss").innerHTML = `R$ ${inss.toFixed(2)}`
+        document.getElementById("sindicato").innerHTML = `R$ ${sindicato.toFixed(2)}`
+        document.getElementById("salarioLiquido").innerHTML = `R$ ${salarioLiquido.toFixed(2)}`
+
+    }
+    </script>
+
+</body>
+
+</html>
