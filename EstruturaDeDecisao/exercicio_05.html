@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 04</title>
+</head>
+
+<body>
+    <!-- Faça um programa para a leitura de duas notas parciais de um aluno.
+    O programa deve calcular a média alcançada por aluno e apresentar
+        A mensagem "Aprovado", se a média alcançada for maior ou igual a sete
+        A mensagem "Reprovado", se a média for menor do que sete
+        A mensagem "Aprovado com Distinção", se a média for igual a dez -->
+
+    <p>Digite nota 1: <input type="text" id="numero1"></p>
+    <p>Digite nota 2: <input type="text" id="numero2"></p>
+    <button onclick="calcMedia()">Calcular Média</button>
+    <p id="media"></p>
+
+    <script>
+        function calcMedia() {
+            var numero1 = parseInt(document.getElementById("numero1").value)
+            var numero2 = parseInt(document.getElementById("numero2").value)
+            var media = (numero1 + numero2) / 2
+
+            if (media == 10) {
+                document.getElementById("media").innerHTML = ` Sua nota foi ${media}. <br> Aprovado com Distinção`
+            } else if (media >= 7) {
+                document.getElementById("media").innerHTML = ` Sua nota foi ${media}. <br> Aprovado`
+            } else {
+                document.getElementById("media").innerHTML = ` Sua nota foi ${media}. <br> Reprovado`
+            }
+        }
+    </script>
+</body>
+
+</html>

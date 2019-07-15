@@ -6,7 +6,7 @@ Treinando Algoritmo e Lógica de Programação com os exercícios disponíveis e
 
 | Tipo de exercício      | Concluido |
 | ---------------------- | --------- |
-| Estrutura De Decisao   | ?? / ??   |
+| Estrutura De Decisao   | 05 / 28   |
 | Estrutura De Repeticao | ?? / ??   |
 | Estrutura Sequencial   | 15 / 15   |
 | Exercicios Classes     | ?? / ??   |

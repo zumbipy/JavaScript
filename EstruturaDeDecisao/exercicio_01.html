@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 01</title>
+</head>
+
+<body>
+    <!-- Faça um Programa que peça dois números e imprima o maior deles. -->
+
+    <p>Digite um numero: <input type="text" id="numero1" value="0" onchange="maiorQ()"></p>
+    <p>Digite outro numero: <input type="text" id="numero2" value="0" onchange="maiorQ()"></p>
+    <p id="maior">O valor é:</p>
+
+    <script>
+        function maiorQ() {
+            var numero1 = Number(document.getElementById("numero1").value)
+            var numero2 = Number(document.getElementById("numero2").value)
+            var maior = Number()
+
+            if (numero1 > numero2) {
+                maior = numero1
+            } else {
+                maior = numero2
+            }
+
+            document.getElementById("maior").innerHTML = `O valor é: ${maior}`
+        }
+    </script>
+
+</body>
+
+</html>

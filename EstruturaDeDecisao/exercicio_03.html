@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 03</title>
+</head>
+
+<body>
+    <!-- Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido. -->
+
+    <p>Digite F ou M: <input type="text" id="letra" onchange="fOuM()"></p>
+    <p id="resultado"></p>
+    <script>
+        function fOuM() {
+            var letra = (document.getElementById("letra").value).toLowerCase()
+            if (letra == "f") {
+                document.getElementById("resultado").innerHTML = "F - Feminino"
+            } else if (letra == "m") {
+                document.getElementById("resultado").innerHTML = "M - Masculino"
+            } else {
+                document.getElementById("resultado").innerHTML = "Sexo Inválido."
+            }
+        }
+    </script>
+
+</body>
+
+</html>
