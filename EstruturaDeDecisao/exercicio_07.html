@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 07</title>
+</head>
+
+<body>
+    <!-- Faça um Programa que leia três números e mostre o maior deles -->
+
+    <p>Digite o numero 1: <input type="number" id="numero1" value=0 onchange="maior()"></p>
+    <p>Digite o numero 2: <input type="number" id="numero2" value=0 onchange="maior()"></p>
+    <p>Digite o numero 3: <input type="number" id="numero3" value=0 onchange="maior()"></p>
+    <p>O maior numero entre os 3 é: <span id="maior"></span></p>
+    <p>O menor numero entre os 3 é: <span id="menor"></span></p>
+
+    <script>
+        function maior() {
+            var numero1 = document.getElementById("numero1").value
+            var numero2 = document.getElementById("numero2").value
+            var numero3 = document.getElementById("numero3").value
+            var maior = Math.max(numero1, numero2, numero3)
+            var menor = Math.min(numero1, numero2, numero3)
+
+            document.getElementById("maior").innerHTML = maior
+            document.getElementById("menor").innerHTML = menor
+        }
+    </script>
+</body>
+
+</html>
