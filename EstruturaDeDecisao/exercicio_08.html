@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08 </title>
+</head>
+<body>
+    <!-- Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar,
+        sabendo que a decisão é sempre pelo mais barato -->
+        <h1>Lista de Produtos.</h1>
+        <table>
+            <tr>
+                <td>Produto numero um valor: </td>
+                <td><input type="number" step="0.01" id="um" onchange="maisBarato()"></td>
+            </tr>
+            <tr>
+                <td>Produto numero dois valor:</td>
+                <td><input type="number" step="0.01" id="dois" onchange="maisBarato()"></td>
+            </tr>
+            <tr>
+                <td>Produto numero três valor: </td>
+                <td><input type="number" step="0.01" id="tres" onchange="maisBarato()"></td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td>Produto mais barato é: </td>
+                    <td colspan="2"><span id="resultado"></span></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <script>
+            function maisBarato() {
+            let a = document.getElementById('um').value;
+            let b = document.getElementById('dois').value;
+            let c = document.getElementById('tres').value;
+            let menor = Math.min(a, b, c);
+
+            document.getElementById('resultado').innerHTML = menor;
+            };
+
+        </script>
+
+</body>
+</html>

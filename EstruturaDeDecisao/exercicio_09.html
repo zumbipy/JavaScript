@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09</title>
+</head>
+
+<body>
+    <!-- Faça um Programa que leia três números e mostre-os em ordem decrescente -->
+
+    <label for="numero1">Digite o numero um: </label>
+    <input type="text" id="numeroUm" onchange="ordem()"><br>
+    <label for="numero1">Digite o numero um: </label>
+    <input type="text" id="numeroDois" onchange="ordem()"><br>
+    <label for="numero1">Digite o numero um: </label>
+    <input type="text" id="numeroTres" onchange="ordem()"><br>
+
+    <p>Ordem decrescente dos numeros é:</p>
+    <span id="resultado"></span>
+
+    <script>
+        function ordem() {
+            let a = Number(document.getElementById("numeroUm").value);
+            let b = Number(document.getElementById("numeroDois").value);
+            let c = Number(document.getElementById("numeroTres").value);
+            let lista = [a, b, c]
+            let n = lista.sort();
+            document.getElementById("resultado").innerHTML = n;
+        }
+    </script>
+</body>
+
+</html>
